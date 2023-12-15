@@ -27,7 +27,7 @@ namespace DesafioFundamentos.Models
 			}
 		}
 
-		public void RemoverVeiculo(decimal precoInicial, decimal precoHora)
+		public void RemoverVeiculo()
 		{
 			Console.WriteLine("Digite a placa do veículo para remover:");
 			string placa = Console.ReadLine();
@@ -44,7 +44,7 @@ namespace DesafioFundamentos.Models
 					horasValidas = int.TryParse(Console.ReadLine(), out horas);
 				}
 
-				decimal valorTotal = precoInicial + precoHora * horas;
+				decimal valorTotal = precoInicial + precoPorHora * horas;
 
 				veiculos.Remove(placa);
 				Console.WriteLine($"O veículo {placa} foi removido e o preço total foi de: {valorTotal:C}");
